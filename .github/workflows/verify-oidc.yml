@@ -1,0 +1,21 @@
+name: Verify OIDC
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::439226423443:role/maroon-ledger-github-actions
+          aws-region: us-east-2
+
+      - name: Verify identity
+        run: aws sts get-caller-identity
