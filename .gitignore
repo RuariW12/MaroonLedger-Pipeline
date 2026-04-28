@@ -1,3 +1,21 @@
 notes/
 
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+tfplan
+*.tfplan
 
+# OS
+.DS_Store
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Scripts
+*.log
