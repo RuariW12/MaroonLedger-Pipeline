@@ -1,0 +1,5 @@
+
+account_id = "example_id"
+github_repo = "MaroonLedger"
+
+# repo points to MaroonLedger, not the pipeline repo. 
