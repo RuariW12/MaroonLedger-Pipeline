@@ -22,3 +22,8 @@ output "private_subnet_ids" {
   description = "Private subnet IDs"
   value       = aws_subnet.private[*].id
 }
+
+output "alb_dns_name" {
+  description = "ALB DNS name to access the application"
+  value       = aws_lb.main.dns_name
+}
