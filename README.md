@@ -22,3 +22,5 @@ Trivy pipeline gate — CI/CD fails on critical or high severity CVEs before ima
 
 ## Tech Stack
 Terraform · AWS (VPC, ECS Fargate, ECR, ALB, S3, CloudFront, IAM, CloudWatch, Secrets Manager) · GitHub Actions · Docker · Trivy
+
+* due to privacy and security concerns, some code has been rewritten to avoid ARN/credential leaks. In order to demonstrate workflows the files were kept but are not currently functional 
