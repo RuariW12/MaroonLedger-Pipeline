@@ -27,3 +27,13 @@ output "alb_dns_name" {
   description = "ALB DNS name to access the application"
   value       = aws_lb.main.dns_name
 }
+
+output "cloudfront_domain" {
+  description = "CloudFront distribution domain for the frontend"
+  value       = aws_cloudfront_distribution.frontend.domain_name
+}
+
+output "cloudfront_distribution_id" {
+  description = "CloudFront distribution ID for cache invalidation"
+  value       = aws_cloudfront_distribution.frontend.id
+}
